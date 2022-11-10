@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+a:active {
+    color: currentColor;
+}
+
+ul {
+    padding-left: 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+li.plus::before {
+    content: "+ ";
+}
+
+li.minus::before {
+    content: "- ";
+}
+
+header {
+    position: absolute;
+    background-color:burlywood;
+    border-bottom: solid 1px black;
+    padding: 1px;
+    z-index: 1;
+    width: 100%;
+}
+
+.menu-button {
+    position: relative;
+    margin: 20px;
+    height: 30px;
+    width: 30px;
+}
+
+.menu-button__line {
+    position: absolute;
+    top: 50%;
+    background-color: black;
+    height: 2px;
+    width: 30px;
+    transition: .1s;
+}
+
+.line-top {
+    top: 25%;
+}
+
+.line-top.active {
+    top: 50%;
+    rotate: 45deg;
+}
+
+.line-center.active {
+    display: none;
+}
+
+.line-bottom {
+    top: 75%;
+}
+
+.line-bottom.active {
+    top: 50%;
+    rotate: -45deg;
+}
+
+.menu {
+    position: absolute;
+    top: -16%;
+    width: 100%;
+    background-color:bisque;
+    border-bottom: solid 1px black;
+    padding: 20px 0;
+    z-index: 0;
+    transition: top .25s linear;
+}
+
+.menu.show {
+    top: 70px;
+}
+
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.drop {
+    display: none;
+}
+
+.drop.active{
+    display: block;
+}
